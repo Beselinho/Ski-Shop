@@ -1,0 +1,113 @@
+:root{
+    --bar-width: 35px;
+    --bar-height: 5px;
+    --hamburger-gap: 6px;
+    --hamburger-margin: 4px;
+    --foreground: white;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height)*3 + var(--hamburger-gap) * 2);
+}
+
+nav {
+    animation-name: aparitie_meniu_hamburger;
+    animation-duration: 1s;
+    width: 116%;
+    position: sticky;
+  }
+  
+  #hamburger {
+    width: 100%;
+    display: block;
+  }
+  
+  #sus {
+    display: none;
+    position: absolute;
+    height: auto;
+    position: fixed;
+    width: 100%;
+    transform-origin: left;
+    transition-duration: 2s;
+  }
+  
+  #ch-menu {
+    display: none;
+  }
+
+#hamburger:has(input:checked)::before{
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height)/-2);
+}
+
+#hamburger:has(input:checked)::after{
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height)/2);
+}
+  
+  #ch-menu:checked ~ #sus {
+    transform-origin: left;
+    display: block;
+    position: relative;
+    z-index: 2;
+    animation-name: aparitie_meniu_hamburger;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  
+  .meniu {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    position: absolute;
+    cursor: pointer;
+  }
+
+  ul.meniu li{
+      width: 100%;
+  }
+  ul.meniu>li:hover{
+    font-size: 130%;
+    transition: 0.8s;
+    overflow: visible;
+}
+
+ul.meniu>li{
+    flex-grow: 1;
+    flex-basis: 75px;
+    max-width: 100%;
+}
+
+ul.meniu ul > li:hover::after, ul.meniu ul > li:focus::after, ul.meniu ul > li:active::after{
+    display: none;
+}
+ul.meniu ul > li:hover::before, ul.meniu ul > li:focus::before, ul.meniu ul > li:active::before{
+    display: none;
+}
+
+
+  
+  @keyframes aparitie_meniu_hamburger {
+    0% {
+      transform: scale(0, 1);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  
+  @keyframes aparitie_meniu_drop {
+    0% {
+      transform: scale(1, 0);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  
+
+  
+  

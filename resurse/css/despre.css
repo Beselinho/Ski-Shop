@@ -1,0 +1,8 @@
+#duotone_ef{
+    background-image: url("http://localhost:8080/resurse/imagini/northface.jpg");
+	background-size:cover;
+	width: 500px; 
+	height: 500px;
+    filter: brightness(150%) grayscale(0);
+    transition: all 1s linear;
+}

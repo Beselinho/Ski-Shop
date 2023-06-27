@@ -1,0 +1,75 @@
+{
+	"cale_galerie": "Resurse/imagini/galerie",
+	"imagini": [
+		{
+			"fisier": "caciula.jpg",
+			"descriere": "Caciula",
+			"anotimp": "iarna"
+		},
+		{
+			"fisier": "geaca.jpg",
+			"descriere": "Geaca",
+			"anotimp": "iarna"
+		},
+		{
+			"fisier": "sun_ski_1.jpg",
+			"descriere": "Ski la Soare",
+			"anotimp": "vara"
+		},
+		{
+			"fisier": "bete.jpg",
+			"descriere": "Bete",
+			"anotimp": "primavara"
+		},
+		{
+			"fisier": "skiuri.jpg",
+			"descriere": "Skiuri",
+			"anotimp": "primavara"
+		},
+		{
+			"fisier": "winter_ski.jpg",
+			"descriere": "Ski Iarna",
+			"anotimp": "iarna"
+		},
+		{
+			"fisier": "sun_ski_2.jpg",
+			"descriere": "Ski La Soare",
+			"anotimp": "vara"
+		},
+		{
+			"fisier": "sun_ski_3.jpg",
+			"descriere": "Ski la Soare",
+			"anotimp": "vara"
+		},
+		{
+			"fisier": "sun_ski_3.jpg",
+			"descriere": "Ski La Soare",
+			"anotimp": "vara"
+		},
+		{
+			"fisier": "sun_ski_4.jpg",
+			"descriere": "Ski La Soare",
+			"anotimp": "vara"
+		},
+		{
+			"fisier": "sun_ski_5.jpg",
+			"descriere": "Ski La Soare",
+			"anotimp": "vara"
+		},
+		{
+			"fisier": "sun_ski_6.jpg",
+			"descriere": "Ski La Soare",
+			"anotimp": "vara"
+		},
+		{
+			"fisier": "sun_ski_7.jpg",
+			"descriere": "Ski La Soare",
+			"anotimp": "vara"
+		},
+		{
+			"fisier": "sun_ski_9.jpg",
+			"descriere": "Ski La Soare",
+			"anotimp": "vara" 
+		}
+	]
+}
