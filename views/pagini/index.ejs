@@ -14,282 +14,250 @@
 </head>
 
 <body>
-    <%- include("../fragmente/header.ejs")  %>
-    <header>
-        <h1>
-            <div id="text_r">Ski Shop</div>
-            <div id="reflexie">Ski Shop</div>
+    <%- include("../fragmente/header.ejs") %>
+        <header>
+            <h1 id = "titlu">
+                <div id="text_r">Ski Shop</div>
+                <div id="reflexie">Ski Shop</div>
 
-        </h1>
-    </header>
+            </h1>
+        </header>
 
-    <main>
-        <!--<button id ="tema" class="btn btn-primary">Schimba tema</button>-->
-        <div id="radio buttons"> 
-            <details><summary>Alege o tema!</summary>
-        <input type="radio" id="light" name="nume" value="Light">
-        <label for="light"><i class="fas fa-sun"></i> Light</label><br>
-        <input type="radio" id="dark" name="nume" value="Dark">
-        <label for="dark"><i class="fas fa-moon"></i> Dark</label><br>
-        <input type="radio" id="neon" name="nume" value="Neon">
-        <label for="neon"><i class="fas fa-lightbulb"></i> Neon</label><br></div></details> 
-
-        <div id=grid-pagina>
-            <section id=prezentare>
-                <figure>
-                    <picture>
-                        <source media="(max-width: 1024px)" srcset="./resurse/imagini/fundalskixdd.jpg">
-                        <img src="./resurse/imagini/fundalskixdd.jpg" title="Ski">
-                    </picture>
-                </figure>
-            </section>
-            <section id=produse>
-                <h2>
-                    Ce poti gasi la noi pe site
-                    <i class = "fa fa-cloud"></i>
-                </h2>
-                <ul class = "fa-ul">
-                    <li><i class="fa fa-refresh fa-spin"></i><em>Geci de iarna</em></li>
-                    <li><i class="fa fa-refresh fa-spin"></i>
-                        <em>Manusi de ski</em></li>
-                    <li><i class="fa fa-refresh fa-spin"></i>
-                        <em>Ski-uri</em></li>
-                    <li><i class="fa fa-refresh fa-spin"></i>
-                        <em>Ochelari de ski</em></li>
-                
-                </ul>
-                <div id = "linie">
-                    <hr id ="stou">
-                <hr id ="hr_line">
+        <main>
+            <!--<button id ="tema" class="btn btn-primary">Schimba tema</button>-->
+            <div id="radio buttons">
+                <details>
+                    <summary>Alege o tema!</summary>
+                    <input type="radio" id="light" name="nume" value="Light">
+                    <label for="light"><i class="fas fa-sun"></i> Light</label><br>
+                    <input type="radio" id="dark" name="nume" value="Dark">
+                    <label for="dark"><i class="fas fa-moon"></i> Dark</label><br>
+                    <input type="radio" id="neon" name="nume" value="Neon">
+                    <label for="neon"><i class="fas fa-lightbulb"></i> Neon</label><br>
             </div>
-                <section id="promotie">
-                    <h3>
-                        Chiar acum la PROMOTIE!
-                    </h3>
-                    <p>
-                        Cel <b> mai bun </b> pret! :
-                    </p>
+            </details>
+
+            <div id=grid-pagina>
+                <section id=prezentare>
                     <figure>
                         <picture>
-                            <source media="(max-width: 720px)" srcset="./resurse/imagini/manusixd.jpg">
-                            <source media="(max-width: 1024px)" srcset="./resurse/imagini/manusixd_50.jpg">
-                            <img src="./resurse/imagini/manusixd.png" title="Manusi de ski">
+                            <source media="(max-width: 1024px)" srcset="./resurse/imagini/fundalskixdd.jpg">
+                            <img src="./resurse/imagini/fundalskixdd.jpg" title="Ski">
                         </picture>
-                        <figcaption><s>169,99 RON</s><span style="font-weight: bold;"> 99,99 RON</span></figcaption>
                     </figure>
                 </section>
-            </section>
-            <section id=bestseller>
-                <h3>
-                    Cel mai vandut produs luna aceasta!
-                </h3>
-                <p>
-                <figure>
-                    <picture>
-                        <source media="(max-width: 720px)" srcset="./resurse/imagini/ochelarixd.jpg">
-                        <img src="./resurse/imagini/ochelarixd.png" title="Ochelari de ski">
-                        <br />
-                    </picture>
-                    <figcaption<span style="font-weight: bold;"> 124,99 RON</span></figcaption>
-                </figure>
-                </p>
-            </section>
-            <section id=tabel>
-                <div id= "tabel">
-                 <table id="orar">
-                    <caption>Orar magazin fizic</caption>
-                    <thead>
 
-                        <tr>
-                            <!--<th>Cod</th> -->
-                            <th>Perioadă</th>
-                            <th>Zi</th>
-                            <th>Interval dimineata</th>
-                            <th>Pauza de masa</th>
-                            <th>Interval seară</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="5">Zile<br/>Lucrătoare</td>
-                            <td>Luni</td>
-                            <td>10-12</td>
-                            <td>12-14</td>
-                            <td>14-20</td>
-                        </tr>
-                        <tr>
-                            
-                            <td>Marti</td>
-                            <td>9-12</td>
-                            <td>12-14</td>
-                            <td>14-21</td>
-                        </tr>
-                        <tr>
-                            
-                            <td>Miercuri</td>
-                            <td>9-11</td>
-                            <td>11-13</td>
-                            <td>14-21</td>
-                        </tr>
-                        <tr>
-                            
-                            <td>Joi</td>
-                            <td>9-11</td>
-                            <td>11-13</td>
-                            <td>14-21</td>
-                        </tr>
-                        <tr>
-                            
-                            <td>Vineri</td>
-                            <td>9-12</td>
-                            <td>12-14</td>
-                            <td>14-19</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">Weekend</td>
-                            <td>Sambata</td>
-                            <td>10-12</td>
-                            <td>12-13</td>
-                            <td>13-16</td>
-                        </tr>
-                        <tr>
-                            <td>Duminica</td>
-                            <td>10-14</td>
-                            <td>-</td>
-                            <td>inchis</td>
-                        </tr>
-                    </tbody>
-                    <tfoot></tfoot>
-                </table> 
-            </div>
-            </section>
-            <section id=statistici>
-                <h4>Statistici</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quia eligendi laborum sunt autem.
-                    Ex perspiciatis dignissimos reiciendis debitis non qui ab quae officia aliquid, aliquam dolorum
-                    asperiores ipsa suscipit!</p>
-                
-            </section>
-            <section id=info_faq>
+                <section id=produse>
+                    <h2>
+                        Ce poti gasi la noi pe site
+                        <i class="fa fa-cloud"></i>
+                    </h2>
+                    <ul class="fa-ul">
+                        <li><i class="fa fa-refresh fa-spin"></i><em>Geci de iarna</em></li>
+                        <li><i class="fa fa-refresh fa-spin"></i>
+                            <em>Manusi de ski</em>
+                        </li>
+                        <li><i class="fa fa-refresh fa-spin"></i>
+                            <em>Ski-uri</em>
+                        </li>
+                        <li><i class="fa fa-refresh fa-spin"></i>
+                            <em>Ochelari de ski</em>
+                        </li>
 
-                <h3> FAQ</h3>
-                <details>
-                    <summary>Cum pot plati o comanda?</summary>
-                    <p>Se accepta atat plata cu cardusl de credit cat si plata ramburs la livrarea produselor</p>
-                </details>
-                <details>
-                    <summary>Pot avea increder in calitatea produselor?</summary>
-                    <p>Desigur. Lucram cu brand-uri de incredere si avem grija ca fiecare produs care apare pe site-ul
-                        nostru sa fie intr-o conditie perfecta</p>
-                </details>
-                <details>
-                    <summary>Se face livrarea produselor si in afara tarii?</summary>
+                    </ul>
+                    <div id="linie">
+                        <hr id="stou">
+                        <hr id="hr_line">
+                    </div>
+                    <section id="promotie">
+                        <h3>
+                            Chiar acum la PROMOTIE!
+                        </h3>
+                        <p>
+                            Cel <b> mai bun </b> pret! :
+                        </p>
+                        <figure>
+                            <picture>
+                                <source media="(max-width: 720px)" srcset="./resurse/imagini/manusixd.jpg">
+                                <source media="(max-width: 1024px)" srcset="./resurse/imagini/manusixd_50.jpg">
+                                <img src="./resurse/imagini/manusixd.png" title="Manusi de ski">
+                            </picture>
+                            <figcaption><s>169,99 RON</s><span style="font-weight: bold;"> 99,99 RON</span></figcaption>
+                        </figure>
+                    </section>
+                </section>
+                <section id=bestseller>
+                    <h3>
+                        Cel mai vandut produs luna aceasta!
+                    </h3>
                     <p>
-                        Nu, din pacate nu livram si in afara Romaniei.
+                    <figure>
+                        <picture>
+                            <source media="(max-width: 720px)" srcset="./resurse/imagini/ochelarixd.jpg">
+                            <img src="./resurse/imagini/ochelarixd.png" title="Ochelari de ski">
+                            <br />
+                        </picture>
+                        <figcaption<span style="font-weight: bold;"> 124,99 RON</span></figcaption>
+                    </figure>
                     </p>
-                </details>
-                <div id ="duotone_ef">
-            </section>
-            <section id="parteneri">
-                <h4>Parteneri</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste nam corrupti eaque accusantium, maxime
-                    suscipit. Natus illum consequatur nulla nobis, eos magni nisi officia tempore perferendis pariatur
-                    inventore, ex beatae!</p>
-            </section>
-            <section id = "recomandari">
-                <h2>
-                        <div>Recomandam! </div> 
-                </h2>
-               <p>Showcase pe YouTube pentru Ski-uri Hervis!</p><br />
-                <div class="taburi-iframe">  
-                    <a href="https://www.youtube.com/embed/pI2eVxvMn70" target="ifr-video" class="buton-iframe">Sfaturi legate de
-                        ski-uri</a>
-                    <a href="https://www.youtube.com/embed/1AGT2Pfc-KM" target="ifr-video" class="buton-iframe">Showcase Ski-uri Hervis
-                    </a><br />
+                </section>
+                <section id=tabel>
+                    <div id="tabel">
+                        <table id="orar">
+                            <caption>Orar magazin fizic</caption>
+                            <thead>
 
-                    <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/1AGT2Pfc-KM"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <p>Pentru a afla marimea de ski-uri potrivita pentru tine poti accesa mai jos :</p>
-                <a href="https://www.blizzard-tecnica.com/assets/documents/blizzard/blizzard-ski-sizer_EN.pdf"
-                    download>Descarca documetul</a>
-            </section>
-        </div>
+                                <tr>
+                                    <!--<th>Cod</th> -->
+                                    <th>Perioadă</th>
+                                    <th>Zi</th>
+                                    <th>Interval dimineata</th>
+                                    <th>Pauza de masa</th>
+                                    <th>Interval seară</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="5">Zile<br />Lucrătoare</td>
+                                    <td>Luni</td>
+                                    <td>10-12</td>
+                                    <td>12-14</td>
+                                    <td>14-20</td>
+                                </tr>
+                                <tr>
+
+                                    <td>Marti</td>
+                                    <td>9-12</td>
+                                    <td>12-14</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+
+                                    <td>Miercuri</td>
+                                    <td>9-11</td>
+                                    <td>11-13</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+
+                                    <td>Joi</td>
+                                    <td>9-11</td>
+                                    <td>11-13</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+
+                                    <td>Vineri</td>
+                                    <td>9-12</td>
+                                    <td>12-14</td>
+                                    <td>14-19</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Weekend</td>
+                                    <td>Sambata</td>
+                                    <td>10-12</td>
+                                    <td>12-13</td>
+                                    <td>13-16</td>
+                                </tr>
+                                <tr>
+                                    <td>Duminica</td>
+                                    <td>10-14</td>
+                                    <td>-</td>
+                                    <td>inchis</td>
+                                </tr>
+                            </tbody>
+                            <tfoot></tfoot>
+                        </table>
+                    </div>
+                </section>
+                <section id=statistici>
+                    <h4>Carusel</h4>
+
+                      
+                </section>
+                <section id=info_faq>
+
+                    <h3> FAQ</h3>
+                    <details>
+                        <summary>Cum pot plati o comanda?</summary>
+                        <p>Se accepta atat plata cu cardusl de credit cat si plata ramburs la livrarea produselor</p>
+                    </details>
+                    <details>
+                        <summary>Pot avea increder in calitatea produselor?</summary>
+                        <p>Desigur. Lucram cu brand-uri de incredere si avem grija ca fiecare produs care apare pe
+                            site-ul
+                            nostru sa fie intr-o conditie perfecta</p>
+                    </details>
+                    <details>
+                        <summary>Se face livrarea produselor si in afara tarii?</summary>
+                        <p>
+                            Nu, din pacate nu livram si in afara Romaniei.
+                        </p>
+                    </details>
+                    <div id="duotone_ef"></div>
+                </section>
+                <section id="parteneri">
+                    <h4>Parteneri</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste nam corrupti eaque accusantium,
+                        maxime
+                        suscipit. Natus illum consequatur nulla nobis, eos magni nisi officia tempore perferendis
+                        pariatur
+                        inventore, ex beatae!</p>
+                </section>
+                <section id="recomandari">
+                    <h2>
+                        <div>Recomandam! </div>
+                    </h2>
+                    <p>Showcase pe YouTube pentru Ski-uri Hervis!</p><br />
+                    <div class="taburi-iframe">
+                        <a href="https://www.youtube.com/embed/pI2eVxvMn70" target="ifr-video"
+                            class="buton-iframe">Sfaturi legate de
+                            ski-uri</a>
+                        <a href="https://www.youtube.com/embed/1AGT2Pfc-KM" target="ifr-video"
+                            class="buton-iframe">Showcase Ski-uri Hervis
+                        </a><br />
+
+                        <iframe name="ifr-video" width="560" height="315"
+                            src="https://www.youtube.com/embed/1AGT2Pfc-KM" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <p>Pentru a afla marimea de ski-uri potrivita pentru tine poti accesa mai jos :</p>
+                    <a href="https://www.blizzard-tecnica.com/assets/documents/blizzard/blizzard-ski-sizer_EN.pdf"
+                        download>Descarca documetul</a>
+                </section>
+            </div>
         </main>
-        
 
-       
 
-        </div>
-        <div id="grid-galerie">
-            <% var i=0; %>
-                <% var d_vara=new Date("July 13, 2014 11:13:00") %>
-                    <% var d=new Date(); %>
-                        <% var anotimp="" ; %>
-                            <% if(d.getMonth()>= 2 && d.getMonth() <= 4) { anotimp="primavara" ; }%>
-                                    <% if(d.getMonth()>= 5 && d.getMonth() <= 7) { anotimp="vara" ; }%>
-                                            <% if(d.getMonth()>= 8 && d.getMonth() <= 10) { anotimp="toamna" ; }%>
-                                                    <% if(d.getMonth()==0 || d.getMonth()==1 || d.getMonth()==11) {
-                                                        anotimp="iarna" ; }%>
         
-                                                        <% for (let imag of locals.imagini) { %>
-                                                            <% if(imag.anotimp && imag.anotimp==anotimp) { %>
-                                                                <% i=i + 1; %>
-                                                                    <% if(i>= 9) { break; }%>
-                                                                        <figure>
-                                                                            <div id="img-container">
-                                                                                <picture>
-                                                                                    <source media="(max-width:600px)"
-                                                                                        srcset="<%- imag.fisier_mic %>" />
-        
-                                                                                    <source media="(max-width:1000px)"
-                                                                                        srcset="<%- imag.fisier_mediu %>" />
-        
-                                                                                    <source media="(max-width:2400px)"
-                                                                                        srcset="<%- imag.fisier_mare %>" />
-                                                                                    <img src="<%- imag.fisier %>">
-                                                                                </picture>
-                                                                            </div>
-                                                                            <% if(imag.autor) { %>
-                                                                                <figcaption><%- imag.descriere %> by
-                                                                                        <%- imag.autor %></figcaption>
-                                                                                <% } else { %>
-                                                                                    <figcaption><%- imag.descriere %>
-                                                                                    </figcaption>
-                                                                                    <% } %>
-                                                                        </figure>
-                                                                        <div id="gol"></div>
-                                                                        <div id="gol2"></div>
-                                                                        <% } %>
-                                                                            <% } %>
-        </div>
-
+        <%- include("../fragmente/galerie-statica.ejs") %>
 
         <div id="container-galerie-animata">
-                <div class="galerie_animata" id="galanim" style="--nrImg: <% locals.nrImagini %>">
+            <div class="galerie_animata" id="galanim" style="--nrImg: <% locals.nrImagini %>">
 
-                    <% var i=0; %>
-                        <% for (let imag of locals.imagini) { %>
-                            <% i=i + 1; %>
-                                <% if(i> locals.nrImagini) { break; }%>
-                                    <% var nume_imag=imag.fisier.split('\\'); %>
-                                        <% nume_imag=nume_imag[nume_imag.length - 1]; %>
-                                            <figure>
-                                                <picture>
-                                                    <source srcset="<%- imag.fisier_mediu %>"
-                                                        media="(max-width:1000px)" />
-                                                    <img src="<%- imag.fisier %>" alt=" imagine ">
-                                                </picture>
-                                                <figcaption><%-imag.descriere %></figcaption>
-                                            </figure>
-                                            <% } %>
-                </div>
+                <% var i=0; %>
+                    <% for (let imag of locals.imagini) { %>
+                        <% i=i + 1; %>
+                            <% if(i> locals.nrImagini) { break; }%>
+                                <% var nume_imag=imag.fisier.split('\\'); %>
+                                    <% nume_imag=nume_imag[nume_imag.length - 1]; %>
+                                        <figure>
+                                            <picture>
+                                                <source srcset="<%- imag.fisier_mediu %>" media="(max-width:1000px)" />
+                                                <img src="<%- imag.fisier %>" alt=" imagine ">
+                                            </picture>
+                                            <figcaption>
+                                                <%-imag.descriere %>
+                                            </figcaption>
+                                        </figure>
+                                        <% } %>
             </div>
+        </div>
 
-    
-  <%- include("../fragmente/footer.ejs") %>
+
+        <%- include("../fragmente/footer.ejs") %>
+        
 </body>
 
 </html>

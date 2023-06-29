@@ -17,9 +17,10 @@ nav{
     background-color: var(--culoare-meniu);
     height: var(--inaltime-meniu);
     position: sticky;   
-    width: calc(100vw - 17px);
+    width: calc(100vw - 19px);
     top:0;
     margin-left: calc(-1*var(--spatiere-pagina));
+    z-index: 1;
 }
 
 .i{
@@ -53,6 +54,7 @@ ul.meniu li{
     background-color: var(--culoare-meniu);
     overflow: hidden;
     text-align: center;
+    /*border: 2px solid var(--culoare-border-cells);*/
     transition: background-color 0.8s linear;
     box-sizing: border-box; 
 }
@@ -64,7 +66,9 @@ ul.meniu>li:hover{
 }
 
 ul.meniu ul li{
-    font-size: 70%;    
+    font-size: 70%;
+    
+     
 }
 
 ul.meniu ul li:hover{
@@ -76,7 +80,7 @@ ul.meniu ul li:hover{
 ul.meniu ul > li::before{
     content: "";
   position: absolute;
-  /*z-index: -1;*/
+  z-index: -1;
   top: 0;
   left: 0;
   right: 235px;
@@ -150,6 +154,7 @@ ul.meniu li div, ul.meniu li a{
     animation-fill-mode:forwards;
     transform-origin: center top;
 }
+
 
 @keyframes animatie-meniu {
 0% {

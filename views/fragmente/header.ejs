@@ -11,7 +11,7 @@
     <div id = "sus">
     <ul class = "meniu">
         <li class><div id = "acasa">            
-            <a href="#">Acasă</a></div>
+            <a href="/index">Acasă</a></div>
             <div id = "acasa-mediu">
             <i class = "fa fa-home"></i> </div>
         </li>
@@ -22,7 +22,26 @@
             <ul>
                 <li><a href="#promotie">Promotii!</a></li>
                 <li><a href="#bestseller">Cele mai vandute!</a></li>
-            </ul>
+                <li><a href="/produse">Toate</a></li>
+                <% for (let i=1; i < obGlobal.optiuniMeniu.length; i++) { %>
+                    <li><a href="/produse?tip=<%- obGlobal.optiuniMeniu[i].unnest %>"><%- obGlobal.optiuniMeniu[i].unnest %><div>&#8594 </div></a></li>
+                <%}%>
+            </ul>       
+        </li>
+        <li>
+            <a id = "cos" href="/cos-virtual">Catre cos!</a>
+        </li>
+        <li><a id = "Tema">Tema</a>
+            <ul>
+            <div id="radio buttons1">
+                    <li><input type="radio" id="light" name="nume" value="Light">
+                    <label for="light"><i class="fas fa-sun"></i> Light</label></li>
+                    <li><input type="radio" id="dark" name="nume" value="Dark">
+                    <label for="dark"><i class="fas fa-moon"></i> Dark</label></li>
+                    <li><input type="radio" id="neon" name="nume" value="Neon">
+                    <label for="neon"><i class="fas fa-lightbulb"></i> Neon</label></li>
+            </div>
+             </ul>
         </li>
     </ul>
 </div>

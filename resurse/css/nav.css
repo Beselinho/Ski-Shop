@@ -17,7 +17,7 @@ nav{
     background-color: var(--culoare-meniu);
     height: var(--inaltime-meniu);
     position: sticky;   
-    width: calc(100vw - 18px);
+    width: calc(100vw - 19px);
     top:0;
     margin-left: calc(-1*var(--spatiere-pagina));
     z-index: 1;
@@ -184,5 +184,8 @@ ul.meniu li div, ul.meniu li a{
 
 }
 
+#Tema{
+    color: var(--culoare-text-meniu);
+}
 
 

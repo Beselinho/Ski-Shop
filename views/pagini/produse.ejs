@@ -1,75 +1,198 @@
 <!DOCTYPE html>
 <html  lang="ro">
     <head>
-        <meta name="description" content="Cofetaria Dulcelind ofera prajituri, torturi, produse de patiserie cu optiunea de achizitie online si livrare prin curier.">
-        <meta name="keywords" content="cofetarie, Dulcelind, prajituri, torturi, dulce, pateuri, produse">
+        <meta name="keywords" content="ski, schi, iarna, geaca, manusi, clăpari, ochelari, casca, bete, echipament ski, incaltaminte, reduceri,
+        brand-uri, alpin ski, site schi, zăpadă, gheață, magazin ski, magazin online, snowboard,TheNorthFace">
+        <meta name="description"
+            content="Magazin pentru echipament de ski. Aici puteti gasi orice produs legat de schi, de la geci si manusi pana la ski-uri si clapari!">
         <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" />
-        <title>Cofetăria Dulcelind - home</title>
-        <%- include("../fragmente/head") %>     
+        <link rel="stylesheet" href="/resurse/css/produse500.css" type="text/css" media="screen and (max-width: 500px)" />
+        <title>Ski Shop</title>
         <script type="text/javascript" src=/resurse/js/produse.js></script>
+        <%- include("../fragmente/head") %>     
+       
 
     </head>
     <body>
     <%- include("../fragmente/header") %>
 
     <main>
-        <label> Nume: <input type="text" id="inp-nume"></label>
-        <!--<label> Maxim calorii: <input type="number" id="inp-calorii" value="10000"></label>-->
-        <div> Calorii:<!-- trebuie sa aiba acelasi name ca sa formeze un grup -->
-            <p><label>Dietetic (calorii &lt; 350)
-                <input id="i_rad1"  name="gr_rad" value="0:350" type="radio"/>
-            </label></p>
-            <p><label>Mediu (350 &le; calorii &lt; 700)
-                <input id="i_rad2"  name="gr_rad" value="350:750" type="radio"/>
-            </label>
-            <p><label>Ridicat caloric (700 &le; calorii)
-                <input id="i_rad3" name="gr_rad" value="700:1000000000" type="radio"/>
-            </label>
-            <p><label>Toate
-                <input id="i_rad4" checked name="gr_rad" value="toate" type="radio"/>
-            </label>
+        <div class="row">
+            <div class="col-sm">
+                <label> Nume: 
+                    <input type="text" id="inp-nume" class="form-control">
+                </label>
+            </div>
+            <div class="col-sm">
+                <label>Tip Produs:
+                    <select id="inp-categorie" class="checkbox">
+                        <option id="sel-toate" selected value="toate">Toate</option>
+                        <% for (let opt of locals.optiuni) { %>
+                            <option value="<%- opt.unnest %>"><%- opt.unnest %> </option>
+                        <% } %>-->
+                    </select>
+                </label>
+            </div>
+            <div class="col-sm">
+                <label for="i_datalist" class="col-form-label">Culoare:</label>
+                <input list="id_lista" class="form-control" value="toate" id="i_datalist">
+                <datalist id="id_lista">
+                    <option value="toate">Toate</option>
+                    <option value="Negru">Negru</option>
+                    <option value="Albastru">Albastru</option>
+		            <option value="Rosu">Rosu</option>
+                    <option value="Alb">Alb</option>
+                </datalist>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="range_">
+                    <label class="form-label" for="inp-pret">Pret minim:
+                        <!-- <span class="range-min">0</span>  -->
+                        <input class="form-range" type="range" id="inp-pret" value="0" min="0" max="1000" step="100" class="form-control-range">
+                        <span id="infoRange">(0)</span>
+                    </label>
+                    <!-- <span class="range-max">10000000</span>  -->
+                </div>
+            </div>
+            <div class="col-sm">
+                <label for="inp-marime" class="col-form-label">Marimi:</label>
+                 <select class="form-control" id="inp-marime" multiple>
+                        <!-- <option id="sel-toate" selected value="toate">toate</option> -->
+                        <option value="toate" selected>Toate</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </label>    
+            </div>
+            <div class="col-sm">
+                <div class="btn-group" data-toggle="buttons">Material:
+                    <label class="btn btn-outline-primary">
+                        <input type="radio" name="gr_rad" id="i_rad1" value="bumbac"> Bumbac
+                    </label>
+                    <label class="btn btn-outline-primary">
+                        <input type="radio" name="gr_rad" id="i_rad2" value="nylon"> Nylon
+                    </label>
+                    <label class="btn btn-outline-primary">
+                        <input type="radio" name="gr_rad" id="i_rad3" value="polyester"> Polyester
+                    </label>
+                    <label class="btn btn-outline-primary">
+                        <input type="radio" name="gr_rad" id="i_rad4" value="membrana impermeabila"> Impermeabil
+                    </label>
+                    <label class="btn btn-outline-primary">
+                        <input type="radio" name="gr_rad" id="i_rad5" value="toate" checked> Toate
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="true" id="i_check1">
+                    <label class="form-check-label" for="i_check1">
+                        Voucher
+                    </label>
+                </div>
+            </div> 
+            <div class="col-sm">
+                <!--<div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="true" id="i_check2">
+                    <label class="form-check-label" for="i_check2">
+                        Noutăți
+                    </label>
+                </div>-->
+            </div>
+            <!-- <div class="col-sm">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="true" id="saveFilter">
+                    <label class="form-check-label" for="saveFilter">
+                        Salveaza Filtrare
+                    </label>
+                </div>
+            </div> -->
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-floating">
+                    <textarea class="form-control" id="i_textarea" placeholder="Descriere"></textarea>
+                    <label for="i_textarea">Descriere</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <button class="btn btn-primary" id="filtrare">Aplica filtre <i class="bi bi-filter"></i></button> 
+                <button class="btn btn-secondary" id="resetare">Reseteaza filtre <i class="bi bi-x-square"></i></button><br/>
+                <!-- <button class="btn btn-primary" id="sortCrescNume">Sorteaza crescator dupa pret si nume <i class="bi bi-sort-up"></i></button>
+                <button class="btn btn-secondary" id="sortDescrescNume">Sorteaza descrescator dupa pret si nume <i class="bi bi-sort-down"></i></button>  -->
+                <div class="sortare_dinamica">
+                    <!-- Exemplu de select-uri pentru cheile de sortare -->
+                        <select id="selectCheie1" class="form-select form-select-sm" >
+                            <option value="pret">Preț</option>
+                            <option value="nume">Nume</option>
+                            <option value="tipuri">Categorie</option>
+                        </select>
 
+                        <select id="selectCheie2" class="form-select form-select-sm">
+                            <option value="pret">Preț</option>
+                            <option value="nume">Nume</option>
+                            <option value="tipuri">Categorie</option>
+                        </select>
 
-        <label> Pret minim: <input type="range" id="inp-pret" value="0" min="0"  max="70"> <span id="infoRange">(0)</span></label>
-        <label>Select simplu:
-            <select id="inp-categorie">
-                <option id="sel-toate" selected value="toate">toate</option>
-                <% for (let opt of locals.optiuni) { %>
-                    <option value="<%- opt.unnest %>"><%- opt.unnest %> </option>
-                <% } %>
-            </select>
-        </label>
-        <p>
-        <button id="filtrare">Filtreaza</button> 
+                        <!-- Exemplu de select pentru ordine -->
+                        <select id="selectOrdine" class="form-select form-select-sm">
+                            <option value="crescator">Crescător</option>
+                            <option value="descrescator">Descrescător</option>
+                        </select>
 
-        <button id="resetare">Reseteaza</button><br/>
-        <button id="sortCrescNume">Sorteaza crescator dupa pret si nume</button>
-        <button id="sortDescrescNume">Sorteaza descrescator dupa pret si nume</button>
-        </p>
-        
+                        <!-- Buton pentru a aplica sortarea -->
+                        <button id="btnSortare" class="btn btn-secondary btn-sm">Sortează</button>
+
+                </div>
+                  
+            </div>
         <p id="p-suma">Apăsați Alt+"c" pentru suma preturilor produselor afișate. </p>
-        <section id="produse">
             <h2>Produse</h2>
-            <div class="grid-produse">
+            <div class="grid-produse ">
+                <!--<div class="row" id="produse-container">-->
                 <% for( let prod of locals.produse) { %>
+                    <div class="col-sm-4 card produs">
                     <article class="produs" >
-                        <h3 class="nume">Nume: <a href="/produs/<%-prod.id %>" ><span class="val-nume"><%- prod.nume%></span></a></h3>
-                        <div class="info-prod">
-                            <p class="pret">Pret: <span class="val-pret"><%- prod.pret%></span></p>
-                            <p class="calorii">Calorii: <span class="val-calorii"><%- prod.calorii%></span></p>
-                            <p class="gramaj">Gramaj: <span class="val-gramaj"><%- prod.gramaj%></span></p>
-                        </div>
-                        <p class="categorie">Categorie:<span class="val-categorie"><%- prod.categorie%></span></p>
                         <figure>
-                            <a href="/produs/<%-prod.id %>" ><img src="/resurse/imagini/produse/<%- prod.imagine %>" style="width:50%;height:auto;" alt="[imagine <%- prod.nume %>]" /></a>
+                            <a href="/produs/<%-prod.id %>" ><img src="/resurse/imagini/produse/<%- prod.imagine %>" alt="[imagine <%- prod.nume %>]" /></a>
                         </figure>
+                        <h3 class="nume">Nume: <a href="/produs/<%-prod.id %>" ><span class="val-nume"><%- prod.nume%></span></a></h3>
+                        <div class="info-prod1">
+                            <p class="pret">Pret: <span class="val-pret"><%- prod.pret%></span></p>
+                        <p class="marime">Marimi:<span class="val-marime"><%-prod.marime%></span></p>
+                        <p class="data">Adaugat la:<span class="val-data">
+                        <time class="val-data_adaugare" datetime="<%- prod.data_adaugare %>"><%- new Date(prod.data_adaugare).toLocaleDateString('ro-RO', {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'}) %></time>
+                        <div id = "detalii_prod1">
+                            <p class="culoare">Culoare:<span class="val-culoare"><%- prod.culoare%></span></p>
+                        </div>
+                        <p class="voucher">Admite Voucher:<span class="val-voucher"><%-prod.voucher%></span></p>
+                        <div id = "test">
+                        <p class="card-text">
+                            <span class="text-red">Tip Categorie:</span>
+                            <span class="val-tipuri"><%- prod.categorie%></span>
+                            <p class="material">Material:<span class="val-material"><%-prod.material%></span></p>
+                            <p class="descriere">Descriere:<span class="val-descriere"><%-prod.descriere%></span></p>
+                        </div>
+                    
+                        
                         <label class="selecteaza-cos">
-                            Selectează:<br/>
+                            Adauga in cos:<br/>
                             <input type="checkbox" class="select-cos" value="<%-prod.id %>" autocomplete="off">
                         </label>
+                    </div>
                     </article>
+                </div>
                 <% }%>
+                </div>
+                <p id ="demo"></p>
             </div>
         </section>
     </main>

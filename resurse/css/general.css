@@ -120,6 +120,7 @@ img{
 
 #statistici {
     grid-area: z-statistici;
+    place-content: center;
 }
 
 #info_faq {
@@ -193,7 +194,7 @@ body {
         border-bottom: none;
         border-top: none;
         color: var(--culoare-text2);
-        padding: 2px;
+        padding: 16px;
         font-weight: bolder;
         font-size: 20px;
         border-radius: 100%;
@@ -225,7 +226,7 @@ body {
     right: 10%;
     visibility: hidden;
     width: 100px;
-    height: 20px;
+    height: 30px;
     background-color: var(--culoare-hover);
     color: var(--culoare-text2);
     border-radius: 6px;
@@ -318,12 +319,18 @@ h1:hover{
     position: relative;
     display:inline-flex;
     transform: scaleX(-1) skew(0deg, -30deg);    
-    left: 160px;
+    left: 140px;
     bottom: 15px;
     z-index: -1;
     
     
     font-size: 70%;
+}
+
+#titlu{
+   margin-top: 1.5cm;
+   scale: 100%; 
+   margin-bottom: 0.2cm;
 }
 #stou{
     visibility: hidden;
@@ -331,7 +338,6 @@ h1:hover{
 
 #linie{
     position: relative;
-    height: 20px;
     border: none;
     color: var(--culoare-par);
     z-index: -1;
@@ -364,7 +370,7 @@ h1:hover{
     border-left-color: transparent;
     border-top-color: transparent;
     border-bottom-color : transparent;
-  }*/
+  }
 
 
   #duotone_ef {
@@ -412,5 +418,34 @@ h1:hover{
     left: 0;
 }
 
+.img_carusel{
+    width: 300px;
+    height: 300px;
+    margin: 2cm;
+}
+
+@keyframes slideIn {
+    0% {
+        bottom: -100px; /* Începe de sub ecran */
+        color: var(--culoare-tabel1) /* Culoarea inițială a textului */
+    }
+    50% {
+        bottom: 20px; /* La jumătatea animației, bannerul va fi 20px deasupra graniței de jos a paginii */
+        color: var(--culoare-tabel2) /* Culoarea textului se schimbă */
+    }
+    100% {
+        bottom: -20px; /* La final, bannerul se aliniază cu granița de jos a paginii */
+        color: var(--culoare-par) /* Culoarea textului se schimbă din nou */
+    }
+}
+
+.cookie-banner {
+    background-color: var(--culoare-hover-tabel);
+    position: fixed;
+    width: 100%;
+    display: none; /* Bannerul este inițial ascuns */
+    animation: slideIn 3s; /* Aplică animația definită mai sus */
+    animation-fill-mode: forwards; /* Pastram starea finala a animatiei */
+}
 
 
